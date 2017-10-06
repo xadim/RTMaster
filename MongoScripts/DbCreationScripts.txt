@@ -1,0 +1,18 @@
+#Starting Mongodb process (dbpath -path where database is stored)
+	mongod --dbpath \mnt\mongoebs\
+	
+#Connecting to mongoshell
+	mongo
+
+#Creating Database
+	use RoamingTails
+
+#Creating Collections in database
+	db.createCollection("UserProfile")
+	db.createCollection("Restaurants")
+	
+
+	
+#Importing files in database
+ For local:	mongoimport --db RoamingTails --collection Restaurants --type csv --ignoreBlanks --headerline --file C:\Users\LENOVO\Downloads\Restaurants.csv
+ For AWS:	mongoimport --db RoamingTails --collection Restaurants --type csv --ignoreBlanks --headerline --file ~/Restaurants.csv
